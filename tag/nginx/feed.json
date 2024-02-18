@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Dragonborn-zz's个人博客 • All posts by \"nginx\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2023/04/30/nginx%E6%90%AD%E5%BB%BA%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "url": "http://example.com/2023/04/30/nginx%E6%90%AD%E5%BB%BA%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "title": "nginx搭建文件服务器",
+            "date_published": "2023-04-30T00:09:41.000Z",
+            "content_html": "<p>nginx 配置</p>\n<figure class=\"highlight nginx\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br><span class=\"line\">18</span><br><span class=\"line\">19</span><br><span class=\"line\">20</span><br><span class=\"line\">21</span><br></pre></td><td class=\"code\"><pre><code class=\"hljs nginx\"><span class=\"hljs-section\">server</span> &#123;<br>        <span class=\"hljs-attribute\">listen</span> <span class=\"hljs-number\">443</span>;<br>        <span class=\"hljs-comment\"># 对应的域名，多个以空格分开</span><br>        <span class=\"hljs-attribute\">server_name</span>  cdn.xxx.com;<br>        <span class=\"hljs-attribute\">charset</span> utf-<span class=\"hljs-number\">8</span>;<br><br>        <span class=\"hljs-comment\"># 证书文件地址</span><br>        <span class=\"hljs-comment\">#ssl_certificate      /data/ssl/cdn.xxx.com_bundle.crt;</span><br>        <span class=\"hljs-attribute\">ssl_certificate</span>      /data/ssl/cdn.xxx.com.pem;<br>        <span class=\"hljs-comment\"># 证书key</span><br>        <span class=\"hljs-attribute\">ssl_certificate_key</span>   /data/ssl/cdn.xxx.com.key;<br>        <br>        <span class=\"hljs-comment\">#监听/file的路由地址映射到磁盘</span><br>        <span class=\"hljs-section\">location</span> /file &#123;<br>                <span class=\"hljs-attribute\">add_header</span> Access-Control-Allow-Origin *;<br>                <span class=\"hljs-attribute\">add_header</span> Access-Control-Allow-Credentials <span class=\"hljs-literal\">true</span>;<br>                <span class=\"hljs-attribute\">add_header</span> Access-Control-Allow-Methods GET,POST,OPTIONS;<br>                <span class=\"hljs-attribute\">add_header</span> Access-Control-Allow-Headers DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type;<br>                <span class=\"hljs-attribute\">alias</span> /data/file;<br>                &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>\n",
+            "tags": [
+                "nginx"
+            ]
+        }
+    ]
+}

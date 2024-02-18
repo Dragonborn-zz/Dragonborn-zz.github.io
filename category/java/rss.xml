@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Dragonborn-zz&#39;s个人博客 • Posts by &#34;java&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 18 Feb 2024 03:28:48 +0000</pubDate>
+        <lastBuildDate>Sun, 18 Feb 2024 03:28:48 +0000</lastBuildDate>
+        <category>docker</category>
+        <category>gitlab</category>
+        <category>maven</category>
+        <category>lombok</category>
+        <category>manifold</category>
+        <category>nginx</category>
+        <category>android</category>
+        <category>gson</category>
+        <category>bug</category>
+        <category>java</category>
+        <category>mybatis</category>
+        <category>TypeHandler</category>
+        <category>PageHelper</category>
+        <category>git</category>
+        <category>vim</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/02/18/android/Gson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%97%B6%E9%97%B4long%E5%80%BC%E8%BD%AC%E4%B8%BADate%E7%B1%BB%E5%9E%8B%E6%8A%A5%E9%94%99/</guid>
+            <title>Gson反序列化时间long值转为Date类型报错</title>
+            <link>http://example.com/2024/02/18/android/Gson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%97%B6%E9%97%B4long%E5%80%BC%E8%BD%AC%E4%B8%BADate%E7%B1%BB%E5%9E%8B%E6%8A%A5%E9%94%99/</link>
+            <category>gson</category>
+            <category>bug</category>
+            <pubDate>Sun, 18 Feb 2024 03:28:48 +0000</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;gson反序列化时间long值转为date类型报错即gson无法解析位数太长的时间格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#gson反序列化时间long值转为date类型报错即gson无法解析位数太长的时间格式&#34;&gt;#&lt;/a&gt; Gson 反序列化时间 long 值转为 Date 类型报错，即 Gson 无法解析位数太长的时间格式&lt;/h2&gt;
+&lt;h2 id=&#34;报错日志&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#报错日志&#34;&gt;#&lt;/a&gt; 报错日志&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs log&#34;&gt;com.google.gson.JsonSyntaxException: 2022-10-21 00:00:00&lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.deserializeToDate(DateTypeAdapter.java:87)&lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.read(DateTypeAdapter.java:75)&lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.read(DateTypeAdapter.java:46)&lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.read(ReflectiveTypeAdapterFactory.java:131)&lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:222)&lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.read(ReflectiveTypeAdapterFactory.java:131)&lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:222)&lt;br&gt;at retrofit2.converter.gson.GsonResponseBodyConverter.convert(GsonResponseBodyConverter.java:40)&lt;br&gt;at retrofit2.converter.gson.GsonResponseBodyConverter.convert(GsonResponseBodyConverter.java:27)&lt;br&gt;at retrofit2.OkHttpCall.parseResponse(OkHttpCall.java:243)&lt;br&gt;at retrofit2.OkHttpCall$1.onResponse(OkHttpCall.java:153)&lt;br&gt;at okhttp3.RealCall$AsyncCall.execute(RealCall.java:174)&lt;br&gt;at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)&lt;br&gt;at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)&lt;br&gt;at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)&lt;br&gt;at java.lang.Thread.run(Thread.java:920)&lt;br&gt;Caused by: java.text.ParseException: Failed to parse date [&amp;quot;2022-10-21 00:00:00&amp;quot;]: Invalid time zone indicator &amp;#x27; &amp;#x27;&lt;br&gt;at com.google.gson.internal.bind.util.ISO8601Utils.parse(ISO8601Utils.java:274)&lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.deserializeToDate(DateTypeAdapter.java:85)&lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.read(DateTypeAdapter.java:75) &lt;br&gt;at com.google.gson.internal.bind.DateTypeAdapter.read(DateTypeAdapter.java:46) &lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.read(ReflectiveTypeAdapterFactory.java:131) &lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:222) &lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.read(ReflectiveTypeAdapterFactory.java:131) &lt;br&gt;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:222) &lt;br&gt;at retrofit2.converter.gson.GsonResponseBodyConverter.convert(GsonResponseBodyConverter.java:40) &lt;br&gt;at retrofit2.converter.gson.GsonResponseBodyConverter.convert(GsonResponseBodyConverter.java:27) &lt;br&gt;at retrofit2.OkHttpCall.parseResponse(OkHttpCall.java:243) &lt;br&gt;at retrofit2.OkHttpCall$1.onResponse(OkHttpCall.java:153) &lt;br&gt;at okhttp3.RealCall$AsyncCall.execute(RealCall.java:174) &lt;br&gt;at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32) &lt;br&gt;at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) &lt;br&gt;at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) &lt;br&gt;at java.lang.Thread.run(Thread.java:920) &lt;br&gt;Caused by: java.lang.IndexOutOfBoundsException: Invalid time zone indicator &amp;#x27; &amp;#x27;&lt;br&gt;at com.google.gson.internal.bind.util.ISO8601Utils.parse(ISO8601Utils.java:245) &lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;引发原因，返回格式解析出了问题&lt;/p&gt;
+&lt;figure class=&#34;highlight reasonml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs reasonml&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; Retrofit .&lt;span class=&#34;hljs-constructor&#34;&gt;Builder()&lt;/span&gt;.base&lt;span class=&#34;hljs-constructor&#34;&gt;Url(Api.BASE_URL)&lt;/span&gt;.add&lt;span class=&#34;hljs-constructor&#34;&gt;ConverterFactory(GsonConverterFactory.&lt;span class=&#34;hljs-params&#34;&gt;create&lt;/span&gt;()&lt;/span&gt;).build&lt;span class=&#34;hljs-literal&#34;&gt;()&lt;/span&gt;;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;解决办法&lt;br&gt;
+把 &lt;code&gt;GsonConverterFactory.create()&lt;/code&gt;  改成 &lt;code&gt;GsonConverterFactory.create(new GsonBuilder().setDateFormat(&amp;quot;yyyy-MM-dd HH:mm:ss&amp;quot;).create())&lt;/code&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/02/18/java/lombok%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <title>lombok的使用</title>
+            <link>http://example.com/2024/02/18/java/lombok%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <category>lombok</category>
+            <category>java</category>
+            <pubDate>Sun, 18 Feb 2024 03:28:48 +0000</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;1-引入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-引入&#34;&gt;#&lt;/a&gt; 1. 引入&lt;/h2&gt;
+&lt;p&gt;java 项目引入&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs xml&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;	&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.projectlombok&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;lombok&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;1.18.24&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;hljs-comment&#34;&gt;&amp;lt;!-- Spring Boot 项目此部分可以不写 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Android 项目引入&lt;/p&gt;
+&lt;figure class=&#34;highlight clean&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs clean&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;implementation&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;org.projectlombok:lombok:1.18.24&amp;quot;&lt;/span&gt;&lt;br&gt;annotationProcessor &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;org.projectlombok:lombok:1.18.24&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2-配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-配置文件&#34;&gt;#&lt;/a&gt; 2. 配置文件&lt;/h2&gt;
+&lt;p&gt;lombok 的配置文件名为 lombok.config, 生效的作用域为其所在的目录和其子目录&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs lombok.config&#34;&gt;#指明lombok的根目录为当前配置文件所在目录&lt;br&gt;config.stopBubbling=true&lt;br&gt;# 解决子类对象属性值一致，但其继承的父类对象属性值不一致，在比较的时候会出现比较结果不对的情况&lt;br&gt;lombok.equalsAndHashCode.callSuper=call&lt;br&gt;# 使子类的toString方法包括其继承的父类对象属性值&lt;br&gt;lombok.toString.callSuper = call&lt;br&gt;#生成的set方法返回由null改为this,可以链式调用&lt;br&gt;#lombok.accessors.chain=true&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;3-注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-注解&#34;&gt;#&lt;/a&gt; 3. 注解&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;注解&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;使用位置&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;使用效果&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;注解属性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类的字段生成 get,set 方法，重写类的 equals,toString 和 hashCode 方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Value&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;字段，类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;效果相当于 java17 的 record 类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Getter&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;字段，类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类的字段生成 get 方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Setter&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;字段，类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类的字段生成 set 方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@EqualsAndHashCode&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;重写类的 equals 和 hashCode 方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@ToString&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;重写类的 toString 方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@AllArgsConstructor&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类全参构造函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@NoArgsConstructor&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类生成无参构造函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@RequiredArgsConstructor&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;为类生成有参构造函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Builder&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自动生成构造者模式代码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@val&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;常量声明&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;根据赋值推断出常量类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@var&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;变量声明&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;根据赋值推断出常量类型 (等效 java11 的 var 关键字)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@With&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;字段，类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;作用于类、变量，生成 with + 变量名的方法，返回当前对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@CustomLog&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自定义日志类，生成 log 对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@NonNull&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;作用于成员变量和参数中，标识不能为空，否则抛出空指针异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Generated&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用于标记类、变量、方法是自动生成的，没什么大用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Cleanup&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;变量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自动关闭资源，针对实现了 java.io.Closeable 接口的对象有效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Synchronized&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;方法&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;作用于方法，可以替换 synchronized 关键字或 lock 锁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@SneakyThrows&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;方法&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;作用于方法，对异常进行捕捉并抛出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;@Singular&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;集合字段&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;作用于集合字段，需要配合 @Builder 使用，加入了 @Singular 注解后，lombok 为我们添加了一个为集合添加元素的方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;@CommonsLog，@Log，@JBossLog，@Log4j，@Log4j2，@Slf4j，@XSlf4j：日志注解，作用于类&lt;/p&gt;
+&lt;h2 id=&#34;4-实验性注解的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-实验性注解的使用&#34;&gt;#&lt;/a&gt; 4. 实验性注解的使用&lt;/h2&gt;
+&lt;p&gt;@Accessors：类似于 @Builder 支持链式调用，需要配合 @Setter、@Getter 等注解使用，作用于类、变量&lt;br&gt;
+ @Delegate：作用于容器变量，为该变量生成一堆常用的方法，这些方法都是容器中的方法&lt;br&gt;
+ @ExtensionMethod：作用于类，向类添加方法，无需创建新的子类&lt;br&gt;
+ @FieldDefaults：作用于类，定义变量的访问修饰符以及是否加 final&lt;br&gt;
+@FieldNameConstants：作用于类，生成一个包含所有成员变量的内部类或者内部枚举，内部类中每个字段值即为字段名并且值不可变&lt;br&gt;
+ @Helper：作用于方法内部类，使内部类中的方法暴露在外面可以被直接调用，不建议使用&lt;br&gt;
+ @NonFinal：作用于类、变量，表示变量不加 final&lt;br&gt;
+@PackagePrivate：作用于类和变量，相当于访问修饰符的 default，没什么用&lt;br&gt;
+ @SuperBuilder：支持对于基类成员变量赋值，算是 @Builder 的升级版&lt;br&gt;
+ @Tolerate：实现对冲突的兼容，作用于方法上，没什么大用，可以配合 @Builder 使用&lt;br&gt;
+ @UtilityClass：作用于类，将类标记为 final，并且类、内部类中的方法、字段都标记为 static&lt;br&gt;
+@WithBy3&lt;br&gt;
+ 六、基于 v1.18.22 版本的实验性注解&lt;br&gt;
+ @StandardException：自定义异常类&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/02/06/java/%E5%AF%B9PageHelper%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%81%E8%A3%85/</guid>
+            <title>对PageHelper使用的封装</title>
+            <link>http://example.com/2024/02/06/java/%E5%AF%B9PageHelper%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%81%E8%A3%85/</link>
+            <category>PageHelper</category>
+            <pubDate>Tue, 06 Feb 2024 09:27:01 +0000</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;1-问题点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-问题点&#34;&gt;#&lt;/a&gt; 1. 问题点&lt;/h2&gt;
+&lt;p&gt;在使用 PageHelper 的过程中，产生了两个问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;一个分页接口点击下一页时，绝大多数的情况下数据总数是不变的，但却需要每次请求去查询统计数据总数，产生了性能浪费.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;实际使用中要实现分页要写两步，先在要执行分页的代码前标注 &lt;code&gt;PageHelper.startPage(vo);&lt;/code&gt; , 再在返回数据时使用 &lt;code&gt;PageInfo.of(list)&lt;/code&gt;  生成分页对象，步骤略微麻烦.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-代码&#34;&gt;#&lt;/a&gt; 2. 代码&lt;/h2&gt;
+&lt;p&gt;分页参数基础类&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;package&lt;/span&gt; com.china315net.common.vo;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; io.swagger.annotations.ApiModelProperty;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; lombok.Data;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;static&lt;/span&gt; com.china315net.common.constant.ConstantPool.MAX_PAGE_SIZE;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * 基本分页对象&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Data&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;BasePageVO&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@ApiModelProperty(value = &amp;quot;当前页&amp;quot;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;pageNum&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@ApiModelProperty(value = &amp;quot;当页显示条数&amp;quot;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;pageSize&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;hljs-number&#34;&gt;10&lt;/span&gt;;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@ApiModelProperty(value = &amp;quot;总页数&amp;quot;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;totalRow&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;setPageSize&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Integer pageSize)&lt;/span&gt; &amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;if&lt;/span&gt; (pageSize &amp;gt; MAX_PAGE_SIZE) &amp;#123;&lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.pageSize = MAX_PAGE_SIZE;&lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt;;&lt;br&gt;        &amp;#125;&lt;br&gt;        &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.pageSize = pageSize;&lt;br&gt;    &amp;#125;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;分页工具类&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;package&lt;/span&gt; com.china315net.mybatis.util;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.china315net.common.vo.BasePageVO;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.github.pagehelper.ISelect;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.github.pagehelper.PageHelper;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.github.pagehelper.PageInfo;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.List;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.function.Function;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;PageUtil&lt;/span&gt; &amp;#123;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;static&lt;/span&gt; &amp;lt;T, P &lt;span class=&#34;hljs-keyword&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;BasePageVO&lt;/span&gt;&amp;gt; PageInfo&amp;lt;T&amp;gt; &lt;span class=&#34;hljs-title function_&#34;&gt;doPage&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(P param, Function&amp;lt;P,List&amp;lt;T&amp;gt;&amp;gt; function)&lt;/span&gt; &amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;ISelect&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; () -&amp;gt; function.apply(param);&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;total&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; param.getTotalRow();&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;pageNum&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; param.getPageNum();&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;pageSize&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; param.getPageSize();&lt;br&gt;        PageInfo&amp;lt;T&amp;gt; pageInfo;&lt;br&gt;        &lt;span class=&#34;hljs-comment&#34;&gt;//最后一页强制触发分页条件&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;if&lt;/span&gt; (pageNum*pageSize &amp;gt;= total) &amp;#123;&lt;br&gt;            pageInfo = PageHelper.startPage(param).doSelectPageInfo(select);&lt;br&gt;        &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;br&gt;            pageInfo = PageHelper.startPage(param).setCount(&lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;).doSelectPageInfo(select);&lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;nowTotal&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (pageNum-&lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;)*pageSize + pageInfo.getSize();&lt;br&gt;            &lt;span class=&#34;hljs-comment&#34;&gt;//当前页未满且不是最后一页,设置数据总数为当前数据总数&lt;/span&gt;&lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;if&lt;/span&gt; (pageNum*pageSize &amp;gt; nowTotal) &amp;#123;&lt;br&gt;                total = nowTotal;&lt;br&gt;            &amp;#125;&lt;br&gt;            pageInfo.setTotal(total);&lt;br&gt;        &amp;#125;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; pageInfo;&lt;br&gt;    &amp;#125;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;3-使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-使用&#34;&gt;#&lt;/a&gt; 3. 使用&lt;/h2&gt;
+&lt;p&gt;使用的示例代码如下&lt;/p&gt;
+&lt;figure class=&#34;highlight less&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs less&#34;&gt;&lt;span class=&#34;hljs-variable&#34;&gt;@ApiOperation&lt;/span&gt;(value = &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;列表查询&amp;quot;&lt;/span&gt;)&lt;br&gt;&lt;span class=&#34;hljs-variable&#34;&gt;@GetMapping&lt;/span&gt;(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;/list&amp;quot;&lt;/span&gt;)&lt;br&gt;public ResultBean&amp;lt;PageInfo&amp;lt;BlendingFormulaVO&amp;gt;&amp;gt; &lt;span class=&#34;hljs-built_in&#34;&gt;list&lt;/span&gt;(BlendingFormulaSearchVO search) &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-selector-tag&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-selector-tag&#34;&gt;ResultBean&lt;/span&gt;&lt;span class=&#34;hljs-selector-class&#34;&gt;.success&lt;/span&gt;(PageUtil.&lt;span class=&#34;hljs-built_in&#34;&gt;doPage&lt;/span&gt;(search, &lt;span class=&#34;hljs-attribute&#34;&gt;blendingFormulaService&lt;/span&gt;::listPage));&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;4-工具类效果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-工具类效果&#34;&gt;#&lt;/a&gt; 4. 工具类效果&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当前页为最后一页强制触发查询数据总数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;当前页未满时说明数据库数据总数为当前分页计算出的数据总数，设置数据总数为当前当前分页计算出数据总数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;不满足上面两条且前端传了分页总数的情况，不会去查询数据总数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

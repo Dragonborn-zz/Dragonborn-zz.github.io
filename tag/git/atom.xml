@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>Dragonborn-zz&#39;s个人博客 • Posts by &#34;git&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2024-02-06T08:40:01.000Z</updated>
+    <category term="docker" />
+    <category term="gitlab" />
+    <category term="maven" />
+    <category term="lombok" />
+    <category term="manifold" />
+    <category term="nginx" />
+    <category term="android" />
+    <category term="gson" />
+    <category term="bug" />
+    <category term="java" />
+    <category term="mybatis" />
+    <category term="TypeHandler" />
+    <category term="PageHelper" />
+    <category term="git" />
+    <category term="vim" />
+    <entry>
+        <id>http://example.com/2024/02/06/%E5%B7%A5%E5%85%B7/git%E6%9A%82%E5%AD%98%E5%91%BD%E4%BB%A4/</id>
+        <title>git暂存命令</title>
+        <link rel="alternate" href="http://example.com/2024/02/06/%E5%B7%A5%E5%85%B7/git%E6%9A%82%E5%AD%98%E5%91%BD%E4%BB%A4/"/>
+        <content type="html">&lt;h4 id=&#34;暂存命令的作用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#暂存命令的作用&#34;&gt;#&lt;/a&gt; 暂存命令的作用&lt;/h4&gt;
+&lt;p&gt;可以将 git 工作区的代码更改暂存，之后就可以执行 git pull、git merge 之类的命令&lt;/p&gt;
+&lt;h4 id=&#34;暂存命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#暂存命令&#34;&gt;#&lt;/a&gt; 暂存命令&lt;/h4&gt;
+&lt;figure class=&#34;highlight maxima&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs maxima&#34;&gt;git stash &lt;span class=&#34;hljs-built_in&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;暂存的备注&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;直接执行 git stash 也可以达到暂存的目的，但是连续多次暂存后容易让人混淆哪次暂存了哪些代码&lt;/p&gt;
+&lt;h4 id=&#34;查看暂存记录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看暂存记录&#34;&gt;#&lt;/a&gt; 查看暂存记录&lt;/h4&gt;
+&lt;figure class=&#34;highlight ebnf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs ebnf&#34;&gt;&lt;span class=&#34;hljs-attribute&#34;&gt;git stash list&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;取回暂存代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#取回暂存代码&#34;&gt;#&lt;/a&gt; 取回暂存代码&lt;/h4&gt;
+&lt;figure class=&#34;highlight arcade&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arcade&#34;&gt;git stash &lt;span class=&#34;hljs-built_in&#34;&gt;pop&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;取消【取消暂存代码】&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight pgsql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs pgsql&#34;&gt;git &lt;span class=&#34;hljs-keyword&#34;&gt;reset&lt;/span&gt; &lt;span class=&#34;hljs-comment&#34;&gt;--hard&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;撤回提交&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#撤回提交&#34;&gt;#&lt;/a&gt; 撤回提交&lt;/h2&gt;
+&lt;figure class=&#34;highlight pgsql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs pgsql&#34;&gt;git &lt;span class=&#34;hljs-keyword&#34;&gt;reset&lt;/span&gt; &lt;span class=&#34;hljs-comment&#34;&gt;--soft HEAD&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="git" />
+        <updated>2024-02-06T08:40:01.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2023/02/06/%E5%B7%A5%E5%85%B7/git%E6%9B%B4%E6%96%B0.gitignore%E6%96%87%E4%BB%B6%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88/</id>
+        <title>git更新.gitignore文件后不生效</title>
+        <link rel="alternate" href="http://example.com/2023/02/06/%E5%B7%A5%E5%85%B7/git%E6%9B%B4%E6%96%B0.gitignore%E6%96%87%E4%BB%B6%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88/"/>
+        <content type="html">&lt;p&gt;项目更新了.gitignore 文件后直接提交不会生效，解决如下&lt;/p&gt;
+&lt;figure class=&#34;highlight awk&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs awk&#34;&gt;git rm -r --cached . &lt;span class=&#34;hljs-regexp&#34;&gt;//&lt;/span&gt; 删除本地缓存&lt;br&gt;git add . &lt;span class=&#34;hljs-regexp&#34;&gt;//&lt;/span&gt; 添加要提交的文件&lt;br&gt;git commit -m &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;update .gitignore&amp;#x27;&lt;/span&gt; &lt;span class=&#34;hljs-regexp&#34;&gt;//&lt;/span&gt; 更新本地的缓存&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="git" />
+        <updated>2023-02-06T00:13:01.000Z</updated>
+    </entry>
+</feed>

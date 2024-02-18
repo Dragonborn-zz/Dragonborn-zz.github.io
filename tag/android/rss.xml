@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Dragonborn-zz&#39;s个人博客 • Posts by &#34;android&#34; tag</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 18 Feb 2024 03:28:48 +0000</pubDate>
+        <lastBuildDate>Sun, 18 Feb 2024 03:28:48 +0000</lastBuildDate>
+        <category>docker</category>
+        <category>gitlab</category>
+        <category>maven</category>
+        <category>lombok</category>
+        <category>manifold</category>
+        <category>nginx</category>
+        <category>android</category>
+        <category>gson</category>
+        <category>bug</category>
+        <category>java</category>
+        <category>mybatis</category>
+        <category>TypeHandler</category>
+        <category>PageHelper</category>
+        <category>git</category>
+        <category>vim</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/02/18/android/Android%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94%E7%9A%84SDK%E5%8F%8AJDK%E7%89%88%E6%9C%AC%E8%A6%81%E6%B1%82/</guid>
+            <title>Android各版本对应的SDK及JDK版本要求</title>
+            <link>http://example.com/2024/02/18/android/Android%E5%90%84%E7%89%88%E6%9C%AC%E5%AF%B9%E5%BA%94%E7%9A%84SDK%E5%8F%8AJDK%E7%89%88%E6%9C%AC%E8%A6%81%E6%B1%82/</link>
+            <category>android</category>
+            <pubDate>Sun, 18 Feb 2024 03:28:48 +0000</pubDate>
+            <description><![CDATA[ &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;平台版本&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;SDK 版本&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;版本名称&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;JDK 版本&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 13.0&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 12.0&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;S&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 11.0&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;R&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 10.0&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;Q&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 9.0&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;Pie&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 8.1&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;Oreo&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 8.0&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;Oreo&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 7.1&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;Nougat&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 7.0&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;Nougat&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 6.0&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;Marshmallow&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 5.1&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 5.0&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;Lollipop&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.4&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;KITKAT&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.3&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;JELLY_BEAN_MR2&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.2, 4.2.2&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;JELLY_BEAN_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.1, 4.1.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;JELLY_BEAN&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.0.3, 4.0.4&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;ICE_CREAM_SANDWICH_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 4.0, 4.0.1, 4.0.2&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;ICE_CREAM_SANDWICH&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 3.2&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;HONEYCOMB_MR2&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 3.1.x&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;HONEYCOMB_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 3.0.x&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;HONEYCOMB&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.3.4&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;GINGERBREAD_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.3.3&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;GINGERBREAD_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.3.2&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;GINGERBREAD&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.3.1&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;GINGERBREAD&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.3&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;GINGERBREAD&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.2.x&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;FROYO&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.1.x&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;ECLAIR_MR1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.0.1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;ECLAIR_0_1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 2.0&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;ECLAIR&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 1.6&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;DONUT&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 1.5&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;CUPCAKE&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 1.1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;BASE_1_1&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Android 1.0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;BASE&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Java 代码混淆工具 ProGuard 对应 jdk 关系&lt;/p&gt;
+&lt;p&gt;45 = Java 1.1&lt;br&gt;
+46 = Java 1.2&lt;br&gt;
+47 = Java 1.3&lt;br&gt;
+48 = Java 1.4&lt;br&gt;
+49 = Java 5&lt;br&gt;
+50 = Java 6&lt;br&gt;
+51 = Java 7&lt;br&gt;
+52 = Java 8&lt;br&gt;
+53 = Java 9&lt;br&gt;
+54 = Java 10&lt;br&gt;
+55 = Java 11&lt;br&gt;
+56 = Java 12&lt;br&gt;
+57 = Java 13&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
